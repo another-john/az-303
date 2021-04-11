@@ -43,3 +43,14 @@
     - if you specify an application security group as the source and destination in a security rule, the NICs in both groups must exist within the same virtual network.
       - e.g {Group1: NIC1->VNet1} {Group2: NIC2->VNet2} 
       - you cannot assign Group1 as the source and Group 2as the destination in a rule
+6. Just-in-time Provisioning
+  - useful for protecting against brute-force attacks by limiting the amount of time that the ports for a VM are open
+  - access requests are logged in the AZURE ACTIVITY LOG
+  - need to be in the Standard pricing tier of Azure Security Center
+
+7. Tools:
+  - Azure Security Center
+  - Azure Vault
+  - Azure AD
+  - Azure Policy
+  - Azure Monitor
