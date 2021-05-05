@@ -1,0 +1,81 @@
+## Azure SQL Database
+
+1. Deployment
+  - Options
+    - Physical
+    - Virtual
+    - Infrastructure as a Service
+      - Used to Lift-and-shift SQL Server workloads
+      - for applications that require OS level access
+      - Alternative to purchasing hardware
+      - Useful if other elements of the application are already in Azure
+      - Gives more administrative control of the SQL engine
+    - Platform as a Service
+      - Managed Instance
+        - allows a group of databases to be used together
+        - closest to an IaaS offering
+        - supports almost all on-premises instance-level and database0level capabilities
+        - every managed instance has its own guaranteed resources
+        - built-in backups patching and recovery
+        - private IP address within Azure Virtual Network
+        - up to 8TB
+      - Single Instance 
+        - each database receives its own guaranteed
+          - compute
+          - memory
+          - storage
+        - little administration required
+      - elastic pool
+        - collection of single databases with a shared set of resources such as CPU and memory
+        - fixed amount of resources are shared by all databases in the pool
+        - cost-effective method for managing several databases or building applications that can take advantage of these elastic features
+   - best for
+     - Modern cloud applications
+     - The latest stable SQL Server features
+     - Time constraints in development time
+     - 99.99% availability guaranteed
+     - Built-in backups patching recovery
+     - Serverless Compute options
+   - other benefits
+     - protection with intelligent advanced thread detection
+     - proactive vulnerability assessment alerts
+     - compliance evaluation to make sure your service is adhering to industry standards
+     - cost and the ability to yse abd pay for only what you need
+     - reduced administrative overhead
+     - high SLAs
+  - Purchasing Models
+    - DTU
+      - guarantees a minimum level of compute memory and IO resources
+      - bundled measure of compute storage and IO resources
+      - best for customers who want simple pre-configured resources options
+      - simplifies database resource provisioning by giving the consumer only two levelers
+        - computing performacne
+        - data storage
+      - only available with single instance databases and elastic pool
+    - vCore
+      - Best for consumers who need flexibility and control
+      - Allows you to use Azure Hybrid Benefit to reduce license costs
+      - Supported in all three deployment options
+      - independent scaling of compute storage and IO resources
+  - Service Tiers
+    - General Purpose or Standard
+    - Business Critical or Premium
+    - Hyperscale
+
+2. Business Continuity
+  - means continuing to provide services in the event of a disaster or service interruption
+  - High Availability and Disaster Recovery
+    - Log Shipping
+      - allows for database logs to be shipped to a warm or cold standby server
+    - Azure Blob Storage databases are backed up directly to Blob storage in a different datacenter for disaster recovery
+    - Replication with Azure Site Recovery
+      - Production SQL Server instance in one Azure datacenter replicated directly to Azure Sotrage in a differernt Azure datacenter for disaster recovery
+    - Standard Availability Model
+    - Premium Availability Model
+    - Zone Redundant Configurations
+
+3. Security
+  - Network Security
+  - Access Management
+  - Threat Protection
+  - Information Protection
